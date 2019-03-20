@@ -5,6 +5,7 @@ plugins {
 }
 
 apply plugin: 'io.spring.dependency-management'
+apply plugin: 'nebula.release'
 
 release {
   // Let the default versioning strategy be the maven style -SNAPSHOT, instead of nebula's devSnapshot
@@ -12,7 +13,6 @@ release {
 }
 
 group = 'com.example'
-version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
