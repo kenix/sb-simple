@@ -6,6 +6,11 @@ plugins {
 
 apply plugin: 'io.spring.dependency-management'
 
+release {
+  // Let the default versioning strategy be the maven style -SNAPSHOT, instead of nebula's devSnapshot
+  defaultVersionStrategy = nebula.plugin.release.NetflixOssStrategies.SNAPSHOT(project)
+}
+
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
